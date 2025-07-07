@@ -121,9 +121,6 @@ export default function ReviewsSection({ reviews, title = "Customer Reviews", pr
                   <div className="w-24 bg-gray-200 rounded-full h-2">
                     <div
                       className="bg-yellow-400 h-2 rounded-full"
-                      style={{
-                        width: `${reviews.length > 0 ? (ratingCounts[star - 1] / reviews.length) * 100 : 0}%`
-                      }}
                     />
                   </div>
                   <span className="w-8 text-gray-600">{ratingCounts[star - 1]}</span>
