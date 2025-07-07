@@ -34,7 +34,7 @@ function ReviewCard({ review, productId }: { review: Review; productId?: string 
           <h4 className="font-semibold text-gray-900">{review.metadata.reviewer_name}</h4>
           <div className="flex items-center space-x-2 mt-1">
             <StarRating rating={rating} />
-            <span className="text-sm text-gray-600">{review.metadata.star_rating.value}</span>
+            <span className="text-sm text-gray-600">{review.metadata.star_rating?.value || 'N/A'}</span>
           </div>
         </div>
         {review.metadata.review_date && (
@@ -57,7 +57,7 @@ function ReviewCard({ review, productId }: { review: Review; productId?: string 
           <p className="text-sm text-gray-600">
             Review for:{' '}
             <span className="font-medium text-gray-900">
-              {review.metadata.product.metadata?.name || review.metadata.product.title}
+              {review.metadata.product?.metadata?.name || review.metadata.product?.title || 'Unknown Product'}
             </span>
           </p>
         </div>
