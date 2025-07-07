@@ -24,7 +24,7 @@ function StarRating({ rating }: { rating: number }) {
   )
 }
 
-function ReviewCard({ review }: { review: Review }) {
+function ReviewCard({ review, productId }: { review: Review; productId?: string }) {
   const rating = getStarRatingNumber(review.metadata.star_rating)
   
   return (
@@ -136,7 +136,7 @@ export default function ReviewsSection({ reviews, title = "Customer Reviews", pr
         {/* Reviews Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((review) => (
-            <ReviewCard key={review.id} review={review} />
+            <ReviewCard key={review.id} review={review} productId={productId} />
           ))}
         </div>
       </div>

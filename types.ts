@@ -7,6 +7,7 @@ export interface CosmicObject {
   type_slug?: string;
   created_at: string;
   modified_at: string;
+  thumbnail?: string;
 }
 
 export interface Product extends CosmicObject {

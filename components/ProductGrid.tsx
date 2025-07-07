@@ -34,7 +34,7 @@ export default function ProductGrid({ products, title }: ProductGridProps) {
               <div className="aspect-square relative overflow-hidden rounded-t-lg">
                 {product.metadata.product_images && product.metadata.product_images.length > 0 ? (
                   <img
-                    src={`${product.metadata.product_images[0].imgix_url}?w=400&h=400&fit=crop&auto=format,compress`}
+                    src={`${product.metadata.product_images[0]?.imgix_url}?w=400&h=400&fit=crop&auto=format,compress`}
                     alt={product.metadata.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     width="400"

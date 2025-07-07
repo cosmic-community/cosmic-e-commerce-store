@@ -30,7 +30,7 @@ export default function ProductDetail({ product }: ProductDetailProps) {
           <div className="aspect-square relative overflow-hidden rounded-lg bg-gray-100">
             {images.length > 0 ? (
               <img
-                src={`${images[selectedImageIndex].imgix_url}?w=800&h=800&fit=crop&auto=format,compress`}
+                src={`${images[selectedImageIndex]?.imgix_url}?w=800&h=800&fit=crop&auto=format,compress`}
                 alt={product.metadata.name}
                 className="w-full h-full object-cover"
                 width="800"
